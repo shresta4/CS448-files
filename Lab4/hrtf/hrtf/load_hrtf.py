@@ -14,7 +14,7 @@ def load_hrtf( ad, ed):
     p = 'hrtf/compact/'
 
     # Get nearest available elevation
-    e = max( -40, min( 90, 10*(ed//10)))
+    e = max([ -40, min([ 90, 10*(ed//10)])])
 
     # Get nearest available azimuth
     ad = remainder( ad, 360)
