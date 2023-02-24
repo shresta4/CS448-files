@@ -8,8 +8,7 @@ def load_hrtf( ad, ed):
     #
     # Output:
     #   l,r two 128pt arrays, first is left ear HRTF, second is right ear HRTF
-    from numpy import *
-
+    from numpy import min, max, remainder, fromfile, abs
 
     # Path where the HRTFs are
     p = 'hrtf/compact/'
