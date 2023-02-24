@@ -26,7 +26,7 @@ def load_hrtf( ad, ed):
     else:
         a = ad
         fl = 0
-    a = max( 0, min( 180, 5*(a//5)))
+    a = max([ 0, min([180, 5*(a//5)])])
 
     # Load appropriate response
     h = fromfile( '%s/elev%d/H%de%.3da.dat' % (p, e, e, a), dtype='>i2').astype( 'double')/32768
